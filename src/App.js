@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useState } from 'react';
+import Customer from './components/Customer/Customer';
+
 import './App.css';
 
 function App() {
+  const [selection, setSelection] = useState("a");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <nav>
+        <ul>
+          <li>
+            <button value="a" onClick={(e) => setSelection(e.target.value)}>
+              Blog Form
+            </button>
+          </li>
+        </ul>
+      </nav>
+      {selection === "a" && <Customer/>}
     </div>
   );
 }
