@@ -12,7 +12,7 @@ const DATA = {
     address2: "",
     city: "",
     state:"",
-    zipeCode:"", 
+    zip:"", 
     phone:""
 }
 
@@ -34,10 +34,9 @@ function Customer(){
 
     const customerListHTML = customerList.map((customer, index)=>(
         <div key={index}>
-            <p>{customer.firstName}
-            {customer.lastName}
-            {customer.address}
-            {customer.phone}</p>
+            <p>{customer.firstName} {customer.lastName}</p>
+            <p>{customer.address}  {customer.address2}</p> 
+            <p>{customer.city} {customer.state} {customer.zip} {customer.phone}</p>
         </div>
     ));
 
@@ -110,15 +109,15 @@ function Customer(){
           
           </Form.Group>
 
-          {/* <Form.Group as={Col} controlId="formGridzip">
+          <Form.Group as={Col} controlId="formGridzip">
             <Form.Label>Zip</Form.Label>
             <Form.Control 
-            type="text" 
-            placeholder="12345"
+            type="num" 
+            placeholder=" "
             name= "zip"
             value = {state.zip}
-            onChange = {handelInput} />
-          </Form.Group> */}
+            onChange = {handleInput} />
+          </Form.Group>
   
           <Form.Group as={Col} controlId="formGridphone">
             <Form.Label>Phone</Form.Label>
@@ -136,8 +135,10 @@ function Customer(){
           Submit
         </Button>
       </Form>
+      {customerList.length}
+      {customerListHTML}
 
-      {customerList.length> 0 && <ul className ="col-6">{customerListHTML}</ul>}
+      {/* {customerList.length > 0 && <ul className ="col-6">{customerListHTML}</ul>} */}
 
       </div>
 
@@ -146,5 +147,5 @@ function Customer(){
     );
 
 }
-
+ 
 export default Customer;
