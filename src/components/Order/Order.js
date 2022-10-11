@@ -23,10 +23,9 @@ const ORDERS= [{
 
 const [state, setState] = [{Customer, Products}]
 
-function Order(type, description,  price,  picture){
+function Order(props){
 
-  const [state, setState] = useState(ORDERS);
-  const [order, setOrder] = useState([])
+  const [state, setState] = useState(props.order);
   
    function handleClick(index){
     
@@ -37,15 +36,13 @@ function Order(type, description,  price,  picture){
   
   
   const orderList =   state.map((order, index)=>  {
-      var image = require(`../Products/Images${order.picture}`);
+     
    
       return(<div key={index}>
           <Container fluid="md-8 w-500">
         <Row>
           <Col md={{ span: 10 }}><p></p>
-           <p>{order.description} {order.type}</p>
-           {/* <p>{image}</p> */}
-          <p><img className="img-fluid " src={image} width = {700}></img></p>
+           <p>{order.name}</p>
           <p>Unit Price: ${order.price} </p> 
           </Col>
         </Row>

@@ -14,6 +14,14 @@ import './App.css';
 
 function App() {
   const [selection, setSelection] = useState("a");
+  const [order, setOrder] = useState([]);
+  const [subtotal, setSubtotal] = useState(0);
+
+  const addToOrder = (item) => {
+    setOrder([...order, item]);
+    setSubtotal(subtotal + item.price);
+  }
+
   return (
     <>
     <div className="container">
@@ -48,8 +56,8 @@ function App() {
         </ul>
       </nav>
       {selection === "a" && <Customer/>}
-      {selection === "b" && <Products/>}
-      {selection === "c" && <Order/>}
+      {selection === "b" && <Products addToOrder={addToOrder}/>}
+      {selection === "c" && <Order order={order} setSubtotal={subtotal}/>}
           
             
        
