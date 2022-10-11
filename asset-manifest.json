@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-restaurant-app/static/css/main.2a85f118.css",
-    "main.js": "/react-restaurant-app/static/js/main.f15a8cb2.js",
+    "main.css": "/react-restaurant-app/static/css/main.9eda29f5.css",
+    "main.js": "/react-restaurant-app/static/js/main.9b13dfb8.js",
     "static/js/787.6a1e1712.chunk.js": "/react-restaurant-app/static/js/787.6a1e1712.chunk.js",
     "static/media/pizza_supreme.jpg": "/react-restaurant-app/static/media/pizza_supreme.d510e9734eecca388104.jpg",
     "static/media/pizza_flat.jpg": "/react-restaurant-app/static/media/pizza_flat.85991d8e1d68ecfca183.jpg",
@@ -12,12 +12,12 @@
     "static/media/chicken_wings.jpg": "/react-restaurant-app/static/media/chicken_wings.46da3886017e4617c48d.jpg",
     "static/media/the-pizza-g1b82885cc_640.jpg": "/react-restaurant-app/static/media/the-pizza-g1b82885cc_640.82397d503e3ad8cbdaa7.jpg",
     "index.html": "/react-restaurant-app/index.html",
-    "main.2a85f118.css.map": "/react-restaurant-app/static/css/main.2a85f118.css.map",
-    "main.f15a8cb2.js.map": "/react-restaurant-app/static/js/main.f15a8cb2.js.map",
+    "main.9eda29f5.css.map": "/react-restaurant-app/static/css/main.9eda29f5.css.map",
+    "main.9b13dfb8.js.map": "/react-restaurant-app/static/js/main.9b13dfb8.js.map",
     "787.6a1e1712.chunk.js.map": "/react-restaurant-app/static/js/787.6a1e1712.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a85f118.css",
-    "static/js/main.f15a8cb2.js"
+    "static/css/main.9eda29f5.css",
+    "static/js/main.9b13dfb8.js"
   ]
 }
