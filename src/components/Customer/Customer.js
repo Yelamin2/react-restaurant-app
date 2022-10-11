@@ -17,7 +17,7 @@ const DATA = {
 }
 
 
-function Customer(){
+function Customer(props){
 
     const [state, setState]= useState(DATA);
     const [customerList, setCustomerList] = useState([]);
@@ -44,6 +44,7 @@ function Customer(){
 
         <div>
         This is the customer input
+    
         <Form onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridfirstName">
@@ -135,10 +136,10 @@ function Customer(){
           Submit
         </Button>
       </Form>
-      {customerList.length}
-      {customerListHTML}
+ 
+      
 
-      {/* {customerList.length > 0 && <ul className ="col-6">{customerListHTML}</ul>} */}
+      {customerList.length > 0 && <ul className ="col-6">{customerListHTML}</ul>}
 
       </div>
 
@@ -147,5 +148,5 @@ function Customer(){
     );
 
 }
- 
+
 export default Customer;

@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-start;
+}
+
+.products_list {
+  max-width: 40%;
+  display: flex;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

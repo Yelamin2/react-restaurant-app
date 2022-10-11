@@ -58,12 +58,19 @@ const PRODUCTS= [
 
 ]
 
-function Products(){
+function Products(type, description,  price,  picture){
 const [state, setState] = useState(PRODUCTS);
 const [product, setProduct] = useState([]);
+const [orderList, setOrderList] = useState([])
 
 // setProduct([...product, state]);
 // console.log(products);
+ function handleClick(index){
+  
+
+  console.log(PRODUCTS[index].description)
+
+ }
 
 
 const productsList =   state.map((product, index)=>  {
@@ -75,13 +82,13 @@ const productsList =   state.map((product, index)=>  {
     // console.log(image);
    
     return(<div key={index}>
-        <Container fluid="md-4 w-50">
+        <Container fluid="md-8 w-500">
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><p></p>
+        <Col md={{ span: 10 }}><p></p>
          <p>{product.description} {product.type}</p>
          {/* <p>{image}</p> */}
-        <p><img className="img-fluid img-w-30" src={image} width = {600}></img></p>
-        <p>Unit Price: ${product.price} <Button 
+        <p><img className="img-fluid " src={image} width = {700}></img></p>
+        <p>Unit Price: ${product.price} <Button onClick={()=> handleClick(index)}
         vatiant ="danger"
         as ="input"
         type= "submit"
@@ -103,8 +110,8 @@ const productsList =   state.map((product, index)=>  {
     return (
         <>
 
-       {productsList}
-       This is the product output
+       {productsList},
+       
 
 
       
@@ -121,5 +128,55 @@ const productsList =   state.map((product, index)=>  {
     );
 
 }
+
+// function Orders(type, description,  price,  picture){
+//   const [state, setState] = useState(PRODUCTS);
+//   const [orderList, setOrderList] = useState([])
+  
+//    function handleClick(index){
+    
+  
+//     console.log(PRODUCTS[index].description)
+  
+//    }
+  
+  
+//   orderList =   state.map((product, index)=>  {
+//       var image = require(`./Images${product.picture}`);
+   
+//       return(<div key={index}>
+//           <Container fluid="md-8 w-500">
+//         <Row>
+//           <Col md={{ span: 10 }}><p></p>
+//            <p>{product.description} {product.type}</p>
+//            {/* <p>{image}</p> */}
+//           <p><img className="img-fluid " src={image} width = {700}></img></p>
+//           <p>Unit Price: ${product.price} <Button onClick={()=> handleClick(index)}
+//           vatiant ="danger"
+//           as ="input"
+//           type= "submit"
+//           value = "Order"  ></Button></p> 
+//           </Col>
+//         </Row>
+//       </Container>
+          
+          
+//       </div>)
+  
+//   }
+//       )
+     
+  
+//       return (
+//           <>
+  
+//          {orderList},
+
+//           </>
+  
+//       );
+  
+//   }
+  
 
 export default Products;
